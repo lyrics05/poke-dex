@@ -1,0 +1,41 @@
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px;
+  
+}
+.linkstyle{
+  text-decoration: none;
+}
+
+
+.imageTitle{
+    width: 400px;
+    height: 150px;
+}
+.flex_loading_container{
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.loading_title{
+  font-size: 50px;
+  color:  #FF0000;
+}
+.loading_img{
+  width: 600px;
+  height: 200px;
+
+}
+/*---------------------MEDIA QUERIES--------------------------------------*/
+@media (max-width:480px) {
+  .cards{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 10px;
+  
+}
+.imageTitle{
+  width: 300px;
+  height: 150px;
+}
+}
