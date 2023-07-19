@@ -3,6 +3,7 @@ import { getAllPokemon, getByName } from "../redux/actions/actions";
 import {useState } from "react";
 import { useDispatch } from "react-redux";
 import styles from "./css/Search.module.css";
+import { setPage } from "../redux/actions/actions";
 
 
 
@@ -21,6 +22,7 @@ const Search  = ()=>{
         e.preventDefault()
         dispatch(getByName(input))
         setInput("")
+       dispatch(setPage(1))
     }
     function handleClick(e){
         e.preventDefault()

@@ -34,3 +34,12 @@
       list-style: none;
       color: aliceblue;;
     }
+    .deleteButton{
+      color: white;
+      padding: 10px;
+      background: #20012299;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #6f000086, #200122a1);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #6f000092, #20012297); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      font-size: 15px;
+      font-weight: 400;
+    }

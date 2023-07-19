@@ -33,7 +33,7 @@ const Card = ({ name, img, id, tipo }) => {
           <h3 key={t.name}>Type: {t.name}</h3>
         ))}
       </div>
-      <button onClick={() => handleFavorite(id)}>Add to favorites</button>
+      <button className={styles.favoriteButton} onClick={() => handleFavorite(id)}>Add to favorites</button>
     </div>
   );
 }

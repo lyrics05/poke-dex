@@ -23,6 +23,7 @@ const Paged = ({ maximo }) => {
     const nextPage = parseInt(e.target.value, 10);
     if (!isNaN(nextPage) && nextPage >= 1 && nextPage <= maximo) {
       dispatch(setPage(nextPage));
+      setPage(1)
     }
   };
 

@@ -47,7 +47,7 @@ const CardFavorite = ({ id, tipo, name, img }) => {
           <h3 key={t.name}>Type: {t.name}</h3>
         ))}
       </div>
-      <button onClick={handleDelete}>Delete</button>
+      <button className={styles.deleteButton} onClick={handleDelete}>Delete</button>
     </div>
   );
 };
