@@ -5,6 +5,9 @@ export const GET_NAME = "GET_NAME"
 export const GET_ID="GET_ID";
 export const CREATE__POKEMON="CREATE__POKEMON";
 export const DELETE__POKEMON= "DELETE__POKEMON";
+export const GET_FAVORITE="GET_FAVORITE";
+export const DELETE_FAVORITE="DELETE_FAVORITE";
+export const SET_PAGE="SET_PAGE";
 var bla = []
 
 
@@ -28,7 +31,7 @@ export const getAllPokemon=()=>{
   return async function(dispatch){
     await axios.get(`https://pokeapi.co/api/v2/pokemon?offset=0&limit=251`)
     .then(async (response) => {
-        let arrayResultApi = response.data.results;
+        let arrayResultApi = await response.data.results;
         //me guardo toda la data en una variable arrayResultsApi
         
         let arrayPromises = [];
@@ -38,7 +41,7 @@ export const getAllPokemon=()=>{
         //mapeo toda la data que me trae arrayResultApi y pusheo en el array vacio que es
         //array promises el llamado a la url que trae cada pokemon
         await Promise.all(arrayPromises).then((pokemons) => {
-          console.log(pokemons)
+         
        
           arrayPokemonsApi = pokemons.map((p) => {
               return {
@@ -84,8 +87,21 @@ export const getById =(payload)=> {
     }
 };
 
-export const favorite = ()=>{
-
+export const favorite = (payload)=>{
+return{
+  type:GET_FAVORITE,
+  payload
+}
 }
 
+export function deleteFavorite(payload){
+  return{
+    type:DELETE_FAVORITE,
+    payload
+  }
+}
+
+export function setPage(page) {
+  return { type: SET_PAGE, payload: page };
+}
 

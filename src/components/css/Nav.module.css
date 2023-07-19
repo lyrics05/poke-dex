@@ -1,24 +1,34 @@
-.card{
+
+.container{
+  
+    padding: 10px;
+   
+}
+.ulList{
     background: #0f0c2983;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c298d);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #24243e9f, #302b6399, #0f0c2982); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: auto;    
     border-radius: 5px;
     color: aliceblue;
-   
-  
+    display: flex;
+    justify-content:space-around;
+    margin: 0 auto;
+    padding: 10px;
+    list-style: none;
+    align-items: center;
 }
 
 
 
-.imagen{
-    height: 120px;
-    width: 120px;
+.img{
+ width: 100px;
+ height: auto;
 }
-.pokeTitle{
-  margin-bottom: 0;
+a{
+    text-decoration: none;
+    color: whitesmoke;
 }
-.linkstyle{
-  list-style: none;
-  color: aliceblue;;
+.favorite::marker{
+    color: violet;
 }

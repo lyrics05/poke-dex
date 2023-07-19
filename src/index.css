@@ -12,6 +12,19 @@ body {
   background-attachment:fixed;
 }
 
+.title{
+  font-size: 25px;
+    font-weight: 700;
+    cursor: pointer;
+    color: white;
+}
+
+.title--activo,
+.title:hover{
+    color: rgba(243, 101, 40, 0.716);
+}
+
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

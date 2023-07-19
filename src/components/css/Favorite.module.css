@@ -1,0 +1,36 @@
+.favoriteContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+   
+  }
+
+    .card{
+        background: #0f0c2983;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c298d);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #24243e9f, #302b6399, #0f0c2982); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        height: auto;    
+        border-radius: 5px;
+        color: aliceblue;
+    }
+
+    .nothingTitle{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+    
+    
+    
+    .imagen{
+        height: 120px;
+        width: 120px;
+    }
+    .pokeTitle{
+      margin-bottom: 0;
+    }
+    .linkstyle{
+      list-style: none;
+      color: aliceblue;;
+    }

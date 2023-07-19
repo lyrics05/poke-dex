@@ -1,9 +1,11 @@
-import { GET_NAME, GET_ID, GET__ALL__POKEMONS } from "../actions/actions";
+import { GET_NAME, GET_ID, GET__ALL__POKEMONS, GET_FAVORITE, DELETE_FAVORITE, SET_PAGE } from "../actions/actions";
 
 const initialState = {
     pokemons:[],
     pokesa:[],
     pokemonDetail:[],
+    favorites:[],
+    currentPage:1
 }
 
 const reducer = (state=initialState,action)=>{
@@ -40,7 +42,22 @@ const reducer = (state=initialState,action)=>{
                 ...state,
                 pokemonDetail:detalle
               };
-      
+            case GET_FAVORITE:
+            
+               return{
+                 ...state,
+                 favorites: state.favorites.concat(action.payload)
+               }
+            case DELETE_FAVORITE:
+              return{
+                ...state,
+                favorites: state.favorites.filter(p=> p.id !== action.payload)
+              }
+              case SET_PAGE:
+                return {
+                  ...state,
+                  currentPage: action.payload
+              };
     default:
         return state
   }

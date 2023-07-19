@@ -10,7 +10,6 @@ const Detail = ()=>{
     const dispatch = useDispatch()
     const detalle = useSelector((state)=>state.pokemonDetail)
     const{id}=useParams()
-    console.log(id)
     useEffect(()=>{
         dispatch(getById(id))
     },[dispatch])
